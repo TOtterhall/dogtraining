@@ -1,0 +1,51 @@
+[
+  {
+    "dogName": "Zoe",
+    "breed of dog": "Golden Reitriver",
+    "owner": "Therese",
+    "email": "tessan@gmail.com",
+    "id": "uuid"
+  },
+  {
+    "dogName": "Boss",
+    "breed of dog": "Collie",
+    "owner": "Mårten",
+    "email": "mårten@gmail.com",
+    "id": "uuid"
+  },
+  {
+    "dogName": "Ruff",
+    "breed of dog": "Siberian husky",
+    "owner": "Daniel",
+    "email": "danne@gmail.com",
+    "id": "uuid"
+  },
+  {
+    "dogName": "Doris",
+    "breed of dog": "Amstaff",
+    "owner": "Lisa",
+    "email": "lisa@gmail.com",
+    "id": "uuid"
+  },
+  {
+    "dogName": "Kenzo",
+    "breed of dog": "Shetland sheepdog",
+    "owner": "Patrik",
+    "email": "putte@gmail.com",
+    "id": "uuid"
+  },
+  {
+    "dogName": "Cooper",
+    "breed of dog": "Labrador Reitriver",
+    "owner": "Jimmy",
+    "email": "jimmy@gmail.com",
+    "id": "uuid"
+  },
+  {
+    "dogName": "Nalle",
+    "breed of dog": "Golden Reitriver",
+    "owner": "Melwin",
+    "email": "melwin@gmail.com",
+    "id": "uuid"
+  }
+]
