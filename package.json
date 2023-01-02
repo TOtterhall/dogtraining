@@ -1,0 +1,23 @@
+{
+  "name": "dogtraining",
+  "version": "1.0.0",
+  "description": "Dogtraining with REST-API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TOtterhall/dogtraining.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TOtterhall/dogtraining/issues"
+  },
+  "homepage": "https://github.com/TOtterhall/dogtraining#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
