@@ -1,5 +1,7 @@
-GET http://localhost:3100/dogs
+GET http://localhost:3100/
+###
 
+GET http://localhost:3100/dogs
 ###
 
 GET http://localhost:3100/dogs/id
@@ -8,23 +10,27 @@ GET http://localhost:3100/dogs/id
 POST http://localhost:3100/add
 
 ###
-PUT http://localhost:3100/dogs/id
+
+DELETE http://localhost:3100/dogs/9
 
 ###
-PUT http://localhost:3100/add
+###
+PUT http://localhost:3100/dogs
 Content-Type: application/json
 
       
-          {
-            "dogName": "Tomten",
-            "breed": "Golden Reitriver",
-            "owner": "Potta",
-            "email": "pottan@gmail.com",
-            "id": "uuid"
-          };
+{
+    "dogName": "Tomten",
+    "breed": "Golden Reitriver",
+    "owner": "Potta",
+    "email": "pottan@gmail.com",
+    "id": "uuid"    
+}
+###
+GET http://localhost:3100/dogs/9
+###
+
+POST http://localhost:3100/add
 
 ###
-DELETE http://localhost:3100/dogs/574007c8-d5c9-4625-b321-0e1ea217c939
-
-
 
