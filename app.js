@@ -5,6 +5,7 @@ const port = 3100;
 const fs = require("fs");
 
 const { v4: uuidv4 } = require("uuid");
+const { KeyObject } = require("crypto");
 uuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'
 
 app.use(express.json());
@@ -17,7 +18,9 @@ app.get("/", (req, res) => {
 app.get("/dogs", (req, res) => {
   fs.readFile("dogs.json", (err, data) => {
     if (err) {
-      console.log("Error -404");
+      res
+        .status(404)
+        .send("Kan inte hitta några hundar, de ligger nog och sover...");
     } else {
       const dogs = JSON.parse(data);
       res.status(200).send(dogs);
@@ -26,81 +29,98 @@ app.get("/dogs", (req, res) => {
   });
 });
 
-// Skriver ut en specifik hund
 app.get("/dogs/:id", (req, res) => {
   fs.readFile("dogs.json", (err, data) => {
+    const dogs = JSON.parse(data);
     if (err) {
       console.log("error");
     } else {
-      const dogs = JSON.parse(data);
-      res.status(200).send("Här är en hund med" + req.params.id);
+      let specielDog = req.params.id;
+
+      res.send(
+        "Denna vovve med ID:" +
+          specielDog +
+          " " +
+          "är mycket speciell och har nu rena tassar...:"
+      );
       return;
     }
   });
 });
 
-app.put("/dogs", (req, res) => {
+app.post("/dogs/:dogName", (req, res) => {
   fs.readFile("dogs.json", (err, data) => {
     const dogs = JSON.parse(data);
+    if (err) {
+      console.log("error");
+    } else {
+      let updatedDog = req.body;
 
-    //dogs = dogs.filter((dogs) => parseInt(dogs.id) !== req.params.id);
-    //dogs = dogs.filter((child) => parseInt(child.id) !== req.params.id);
-    let updateDog = req.body;
+      dogs.push(updatedDog);
 
-    dogs.push(updateDog);
-    //dogs.(dogs);
-    //stringufy(tar tre parametrar = users(det vi vill skicka in, 2(manipulera det vi skickar in, 3(vilken formatering vi vill ha))))
-    fs.writeFile("dogs.json", JSON.stringify(dogs), (err) => {
-      if (err) {
-        console.log(err);
-      }
-    });
-    res.send(dogs);
-    return;
+      fs.writeFile("dogs.json", JSON.stringify(dogs, null, 2), (err) => {
+        if (err) {
+          console.log(err);
+        }
+      });
+      res.send(
+        req.params.dogName + "...detta är en ny hund som lämnat nya tassavtryck"
+      );
+      return;
+    }
   });
 });
 
-app.delete("/dogs/:id", (req, res) => {
+app.put("/dogs/:id", (req, res) => {
   fs.readFile("dogs.json", (err, data) => {
-    const dogs = JSON.parse(data);
+    let dogs = JSON.parse(data);
 
-    //dogs = dogs.filter((dogs) => parseInt(dogs.id) !== req.params.id);
-    //dogs = dogs.filter((child) => parseInt(child.id) !== req.params.id);
-    let deletedDog = dogs.map((dog) => dog.id === req.params.id);
+    let changedDog = dogs.find((dog) => dog.id === req.params.id);
+    console.log(changedDog.dogName);
 
-    dogs.delete(deletedDog);
-    //dogs.(dogs);
-    //stringufy(tar tre parametrar = users(det vi vill skicka in, 2(manipulera det vi skickar in, 3(vilken formatering vi vill ha))))
-    fs.writeFile("dogs.json", JSON.stringify(dogs), (err) => {
-      if (err) {
-        console.log(err);
-      }
-    });
-    res.send(dogs);
-    return;
-  });
-});
+    changedDog.dogName = req.body.dogName;
+    console.log(req.body.dogName);
+    // dogs.push(changedDog);
 
-app.post("/add", (req, res) => {
-  fs.readFile("dogs.json", (err, data) => {
-    const dogs = JSON.parse(data);
-
-    let newDog = {
-      dogName: "Zoe",
-      breed: "Golden Reitriver",
-      owner: "Potta",
-      email: "pottan@gmail.com",
-      id: uuidv4(),
-    };
-
-    dogs.push(newDog);
-    // stringufy(tar tre parametrar = users(det vi vill skicka in, 2(manipulera det vi skickar in, 3(vilken formatering vi vill ha))))
     fs.writeFile("dogs.json", JSON.stringify(dogs, null, 2), (err) => {
       if (err) {
         console.log(err);
       }
     });
-    res.send(dogs);
+    res.send(
+      req.params.dogName +
+        "...detta är en uppdaterad hund som lämnat nya tassavtryck"
+    );
+    return;
+  });
+});
+// app.put("/dogs/:id", (req, res) => {
+//   var existAccounts = getAccountData();
+//   fs.readFile(
+//     dataPath,
+//     "utf8",
+//     (err, data) => {
+//       const dogsId = req.params["id"];
+//       existAccounts[dogId] = req.body;
+//       saveAccountData(existAccounts);
+//       res.send(`accounts with id ${accountId} has been updated`);
+//     },
+//     true
+//   );
+// });
+app.delete("/dogs/:id", (req, res) => {
+  fs.readFile("dogs.json", (err, data) => {
+    let dogs = JSON.parse(data);
+
+    let deletedDog = dogs.filter((dog) => dog.id !== req.params.id);
+    dogs.push(deletedDog);
+
+    fs.writeFile("dogs.json", JSON.stringify(deletedDog, null, 2), (err) => {
+      if (err) {
+        console.log(err);
+      }
+    });
+    res.send(req.params.id);
     return;
   });
 });
