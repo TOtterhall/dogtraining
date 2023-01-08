@@ -1,54 +1,42 @@
-GET http://localhost:3100/
-###
-
 GET http://localhost:3100/dogs
 ###
 
-GET http://localhost:3100/dogs/2
-
-###
-POST http://localhost:3100/add
-
-###
-
-DELETE http://localhost:3100/dogs/8
-
-###
-
-PUT http://localhost:3100/dogs/4
+GET http://localhost:3100/dogs/id
 Content-Type: application/json
 
-
 {
-    "dogName": "Halloj testar",
-    "breed": "ddd",
-    "owner": "ddd",
-    "email": "ddd",
-    "id": "4"
+    "id": "8"
 }
-
-
-###
-GET http://localhost:3100/dogs/id
-###
-
-POST http://localhost:3100/add
-
 ###
 
 POST http://localhost:3100/dogs/dogName
 Content-Type: application/json
 
-
 {
-    "dogName": "TESTAR POST",
+    "dogName": "NY DOfG",
     "breed": "ddd",
     "owner": "ddd",
     "email": "ddd",
-    "id": "uuidv4(),"
+    "id": "38669"
 }
 
+###
+PUT http://localhost:3100/dogs/id
+Content-Type: application/json
 
+{
+    "dogName": "Kalle",
+    "breed": "Golden",
+    "owner": "Melwin",
+    "email": "melwin@gmail.com",
+    "id": "123"
+}
 
 ###
+DELETE http://localhost:3100/dogs/id
+Content-Type: application/json
 
+{
+    "id": "123"
+}
+###

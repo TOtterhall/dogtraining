@@ -1,51 +1,58 @@
 [
   {
     "dogName": "Zoe",
-    "breed of dog": "Golden Reitriver",
+    "breed": "Golden Reitriver",
     "owner": "Therese",
     "email": "tessan@gmail.com",
-    "id": "1bhshfh-aelkj4lk-834867sst"
+    "id": "256bg666"
   },
   {
     "dogName": "Boss",
-    "breed of dog": "Collie",
+    "breed": "Collie",
     "owner": "Mårten",
     "email": "mårten@gmail.com",
-    "id": "1bhshfh-aelkj4lk-834867php"
+    "id": "4"
   },
   {
     "dogName": "Ruff",
-    "breed of dog": "Siberian husky",
+    "breed": "Siberian husky",
     "owner": "Daniel",
     "email": "danne@gmail.com",
-    "id": "1bhshfh-aelkj4lk-834867tll"
+    "id": "8"
   },
   {
     "dogName": "Doris",
-    "breed of dog": "Amstaff",
+    "breed": "Amstaff",
     "owner": "Lisa",
     "email": "lisa@gmail.com",
-    "id": "1bhshfh-aelkj4lk-834867sfr"
+    "id": "666"
   },
   {
     "dogName": "Kenzo",
-    "breed of dog": "Shetland sheepdog",
+    "breed": "Shetland sheepdog",
     "owner": "Patrik",
     "email": "putte@gmail.com",
-    "id": "1bhshfh-aelkj4lk-83483jbi"
+    "id": "321"
   },
   {
     "dogName": "Cooper",
-    "breed of dog": "Labrador Reitriver",
+    "breed": "Labrador Reitriver",
     "owner": "Jimmy",
     "email": "jimmy@gmail.com",
-    "id": "1bhshfh-aelkj4lk-83483fru"
+    "id": "123"
+  },
+  {
+    "dogName": "Semlan",
+    "breed": "Labrador Reitriver",
+    "owner": "Nellie",
+    "email": "nellie@gmail.com",
+    "id": "123"
   },
   {
     "dogName": "Nalle",
-    "breed of dog": "Golden Reitriver",
+    "breed": "Golden Reitriver",
     "owner": "Melwin",
     "email": "melwin@gmail.com",
-    "id": "1bhshfh-aelkj4lk-83483gfu"
+    "id": "10"
   }
 ]
