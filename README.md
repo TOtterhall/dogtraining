@@ -2,38 +2,50 @@
 
 Dogtraining with REST-API
 
-\*TA BORT DETTA (För att bli godkänd på den här uppgiften MÅSTE du använda GIT och GitHub. Inlämningen sker som vanligt via läroplattformen där du ska zippa ihop din projektmapp. I din projektmapp ska det finnas (utöver all kod) en README.md fil. Den ska innehålla en titel, beskrivning av projektet, vilka krav som är uppfyllda, info om hur projektet byggs och körs. Kom ihåg att ta bort node_modules!!!)
-
 Beskrivning av projektet:
 Jag valde att bygga ett hund API. Där man kan lägga till, ändra eller ta bort en hund från json filen.
 
-Hur körs projektet?:
+## Hur körs projektet?:
 
-- clona ner Git repot
-- Öppna filen på din dator i VS Code
+BACKEND
+
+1. backend-> dogtraining
+   -> clona ner Git repot:
+   https://github.com/TOtterhall/dogtraining.git
+   gh repo clone TOtterhall/dogtraining
+
+- Öppna filerna på din dator i VS Code
 - Öppna en ny terminal
 - I terminalen skriver du in följande koder:
-  npm install --y
+  npm init --y
   npm install express
   npm install cors
-  npm intall nodemon(om du inte har installerat detta globalt)
+  npm install -g nodemon
 
--För att testköra rekomenderas extension: REST client
+---
+
+SERVERN
 
 I terminalen skriver nu nu:
-nodemon app.js
+-> nodemon app.js
 
 Servern startar...
-I explorer hittar du: dogs.rest -öpnna den
+I explorer hittar du: dogs.rest -> För att testköra servern öppna -> mappen dogs.rest
 klicka på de olika anropen enligt CRUD
 GET, POST, UPDATE, DELETE
 
+---
+
+FRONTEND:
+
 Jag har även byggt en separat frontend applikation som anropar mitt REST api
-Clona ner den mappen här---->
+Clona ner den mappen här----> 2.
 
 Öppna upp filen i VSC
 -> Kör liveserver
 -> Fyll i infon (om du vill lägga till, ändra, deleta, eller uppdatera just din hund)
+
+---
 
 Krav som är uppfyllda:
 
