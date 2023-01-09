@@ -82,7 +82,6 @@ app.put("/dogs/:id", (req, res) => {
       changedDog.email = req.body.email;
 
       console.log(req.body.dogName);
-      // dogs.push(changedDog);
 
       fs.writeFile("dogs.json", JSON.stringify(dogs, null, 2), (err) => {
         if (err) {
