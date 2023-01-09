@@ -39,11 +39,15 @@ GET, POST, UPDATE, DELETE
 FRONTEND:
 
 Jag har även byggt en separat frontend applikation som anropar mitt REST api
-Clona ner den mappen här----> 2.
+Clona ner den mappen här----> 2. dogtraining- frontend
+
+https://github.com/TOtterhall/dogtraining-frontend.git
+gh repo clone TOtterhall/dogtraining-frontend
 
 Öppna upp filen i VSC
 -> Kör liveserver
 -> Fyll i infon (om du vill lägga till, ändra, deleta, eller uppdatera just din hund)
+-> Valde att bara skriva ut det i konsolen, det är där du ser att det funkar.
 
 ---
 
