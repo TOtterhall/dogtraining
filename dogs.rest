@@ -1,12 +1,21 @@
 GET http://localhost:3100/dogs
 ###
 
+# GET http://localhost:3100/dogs/id
+# Content-Type: application/json
+
+# {
+#     "id": "8"
+# }
+###
 GET http://localhost:3100/dogs/id
 Content-Type: application/json
 
 {
     "id": "8"
 }
+
+
 ###
 
 POST http://localhost:3100/dogs/dogName

@@ -29,9 +29,9 @@ app.get("/dogs/:id", (req, res) => {
         .send("404- Kan inte hitta några hundar, de ligger nog och sover...");
     } else {
       let dogs = JSON.parse(data);
-      const specialDog = dogs.find((dog) => dog.id === req.body.id);
+      const specialDog = dogs.find((dog) => dog.id === req.params.id);
       console.log(specialDog.dogName);
-      res.status(200).send(specialDog);
+      res.status(200).json({ specialDog });
       return;
     }
   });
